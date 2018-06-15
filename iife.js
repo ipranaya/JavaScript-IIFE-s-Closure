@@ -43,7 +43,14 @@ sayHelloTo('user');
 ());    //Placing paranthesis inside evaluates the function
 
 
-//Some more way's of creating IIFE
+//Create a function
+function myFunc(){};    //Yay, created.
+//Execute it immediately
+function myFunc(){ console.log('I am created.')}();    //Err.. syntax error.
+//Let's negate the undefined
+!function myFunc(){ console.log('I am created.')}();    //Success, as it doesnt error out.
+
+//Some more way's...
 new function(){ console.log('I am executed!'); }();
 ;(function(){ console.log('I am executed!'); })();
 !function(){ console.log('I am executed!'); }();
@@ -51,5 +58,5 @@ new function(){ console.log('I am executed!'); }();
 void function(){ console.log('I am executed!'); }();
 +function(){ console.log('I am executed!'); }();
 -function(){ console.log('I am executed!'); }();
---function(){ console.log('I am executed!'); }();
-//Well any where in JS where a expression can occur a function can be created, but that doesn't mean you should.
+//So, () having precedence over other symbols makes it function expression and executes immediately.
+//Refer to some minified files to see syntax like these.
