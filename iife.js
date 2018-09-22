@@ -42,6 +42,14 @@ sayHelloTo('user');
     }
 ());    //Placing paranthesis inside evaluates the function
 
+//Another way - Void returns undefined after executing the expression, function in below statement.
+void function () {
+    function sayHelloTo(name) {
+        var greeting = 'Hello';
+        console.log(greeting, name);
+    }
+    sayHelloTo('user');
+}();
 
 //Create a function
 function myFunc(){};    //Yay, created.
